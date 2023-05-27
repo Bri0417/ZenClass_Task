@@ -1,15 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servey Form</title>
-</head>
-<body>
-    
-
-
-
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <title>Servey Form</title>
+      <script src="https://kit.fontawesome.com/7de3164da5.js" crossorigin="anonymous"></script>
+      <style>
+         .form-label{
+         font-weight: 600;
+         }
+         .required{
+         color: red;
+         font-weight: 600;
+         }
+         .rating {
+         width: 180px;
+         }
+         .rating__star {
+         cursor: pointer;
+         color: #dabd18b2;
+         }
+         .rating__star:hover{
+         color: #dabd18b2;
+         }
+         .table td,.head{
+         text-align: center;
+         }
+         tr:nth-child(2),tr:nth-child(4) {
+         background-color:#f1f1f1;
+         }
+         .table>:not(caption)>*>*{
+         border-bottom-width: 0px;
+         }
+         .table tr{
+         border-radius: 5px;
+         }
+         .btn-primary{
+         background-color:#f1f1f1;
+         border:1px solid #eeeeee;
+         color:#000;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <form class="row g-3">
+               <div class="col-12">
+                  <label for="inputFristName" class="form-label">Name<span class="required">*</span></label>
+               </div>
+               <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="First Name">
+               </div>
+               <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Last Name">
+               </div>
+               <div class="col-12">
+                  <label for="inputEmail" class="form-label">Email<span class="required">*</span></label>
+                  <input type="email" class="form-control" id="inputEmail">
+               </div>
+               <div class="col-12">
+                  <label for="inputEmail" class="form-label">Your Experiance<span class="required">*</span></label>
+                  <div class="rating">
+                     <i class="rating__star fa-solid fa-star"></i>
+                     <i class="rating__star fa-solid fa-star"></i>
+                     <i class="rating__star fa-solid fa-star"></i>
+                     <i class="rating__star fa-solid fa-star"></i>
+                     <i class="rating__star fa-solid fa-star"></i>
+                  </div>
+                  <p>Overall how would you rate you experiance us?</p>
+               </div>
+               <div class="col-12">
+                  <label for="inputEmail" class="form-label">How satisfied are you with<span class="required">*</span></label>
+                  <table class="table">
+                     <tr class="head">
+                        <th scope="col"></th>
+                        <th scope="col">Very Unsatisfied</th>
+                        <th scope="col">Unsatisfied</th>
+                        <th scope="col">Neutral</th>
+                        <th scope="col">Satisfied</th>
+                        <th scope="col">Very Satisfied</th>
+                     </tr>
+                     <tr>
+                        <th scope="row">Purshase</th>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Service</th>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Company Overall</th>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="col-12">
+                  <label for="inputEmail" class="form-label">How likely are you to<span class="required">*</span></label>
+                  <table class="table">
+                     <tr class="head">
+                        <th scope="col"></th>
+                        <th scope="col">Very Unlikely</th>
+                        <th scope="col">Unlikely</th>
+                        <th scope="col">Neutral</th>
+                        <th scope="col">Likely</th>
+                        <th scope="col">Very Likely</th>
+                     </tr>
+                     <tr>
+                        <th scope="row">Buy form us agin</th>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Recommanded our product to others</th>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Recommanded our company to others</th>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                        <td> <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="col-12">
+                  <label for="inputEmail" class="form-label">Additional comments or suggestions</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+               </div>
+               <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+               </div>
+            </form>
+         </div>
+      </div>
+      <script>
+         const ratingStars = [...document.getElementsByClassName("rating__star")];
+         
+         function executeRating(stars) {
+         const starClassActive = "rating__star fas fa-star";
+         const starClassInactive = "rating__star far fa-star";
+         const starsLength = stars.length;
+         let i;
+         stars.map((star) => {
+         star.onclick = () => {
+         i = stars.indexOf(star);
+         
+         if (star.className===starClassInactive) {
+           for (i; i >= 0; --i) stars[i].className = starClassActive;
+         } else {
+           for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
+         }
+         };
+         });
+         }
+         executeRating(ratingStars);
+      </script>
+   </body>
 </html>
